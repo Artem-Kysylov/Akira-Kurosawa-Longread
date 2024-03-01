@@ -13,7 +13,7 @@
     <div class="wrapper">
 
         <!-- Header  -->
-        <header class="header">
+        <header class="header js-header">
             <div class="container">
                 <div class="header__inner">
                     <div class="header__logo">
@@ -42,19 +42,19 @@
 
                         <ul class="header__nav-list">
                             <li class="header__nav-item">
-                                <a href="#">ABOUT</a>
+                                <a href="#about">ABOUT</a>
                             </li>
                             <li class="header__nav-item">
-                                <a href="#">FIRST WORKS</a>
+                                <a href="#first-works">FIRST WORKS</a>
                             </li>
                             <li class="header__nav-item">
-                                <a href="#">FILMOGRAPHY</a>
+                                <a href="#filmography">FILMOGRAPHY</a>
                             </li>
                             <li class="header__nav-item">
-                                <a href="#">BOOKS</a>
+                                <a href="#books">BOOKS</a>
                             </li>   
                             <li class="header__nav-item">
-                                <a href="#">INFLUENCE</a>
+                                <a href="#influence">INFLUENCE</a>
                             </li>                           
                         </ul>
 
@@ -92,7 +92,7 @@
             </section>
 
             <!-- About section  -->
-            <section class="section__about">
+            <section class="section__about" id="about">
                 <div class="container">
                     <div class="about__wrapper">
                         <div class="about__story">
@@ -170,7 +170,7 @@
             </section>
 
             <!-- First works  -->
-            <section class="section__works">
+            <section class="section__works" id="first-works">
                 <div class="works__content">
                     <div class="container">
                         <h2 class="works__content-title">FIRST WORKS</h2>
@@ -186,7 +186,7 @@
 
             <!-- Filmography -->
             <!-- Golden age of Akira Kurosawa films section  -->
-            <section class="section__golden">
+            <section class="section__golden" id="filmography">
                 <div class="golden__wrapper">
                     <div class="container">
                         <h2 class="golden__main-title">FILMOGRAPHY</h2>
@@ -307,8 +307,18 @@
                 </div>
 
                 <!-- Horizontal scroll animation  -->
-                <div class="horizontal__container">
-                    <div class="horizontal__img"></div>
+                <div class="outer__container">
+                    <div class="slider__container">
+                        <div class="slider__item">
+                            <img class="slider__item-img" src="./assets/horizontal-scroll-image-1.jpg" alt="image" aria-label="hidden">
+                        </div>
+                        <div class="slider__item">
+                            <img class="slider__item-img" src="./assets/horizontal-scroll-image-2.png" alt="image-2" aria-label="hidden">
+                        </div>
+                        <div class="slider__item">
+                            <img class="slider__item-img" src="./assets/horizontal-scroll-image-3.png" alt="image-3" aria-label="hidden">
+                        </div>
+                    </div>                    
                 </div>
 
                 <!-- Dersu Uzala  -->
@@ -443,12 +453,16 @@
                     </div>
                 </div>
 
-                <!-- Scroll grow animation  -->
-                <div class="scroll_grow-animation"></div>
+                <!-- Scale animation  -->
+                <div class="outer__container">
+                    <div class="scale__animation-container">
+                        <img class="scale__animation-img" src="./assets/scale image.png" alt="image">
+                    </div>
+                </div>
             </section>
 
             <!-- Books section  -->
-            <section class="section__books">
+            <section class="section__books" id="books">
                 <div class="container">
                     <h2 class="books__title">BOOKS</h2>
                     <div class="books__items-wrapper">
@@ -586,7 +600,7 @@
             </section>
 
             <!-- The influence section  -->
-            <section class="section__influence">
+            <section class="section__influence" id="influence">
                 <div class="container">
                     <h2 class="influence__title">THE INFLUENCE OF KUROSAWA ON OTHER FILM MAKERS</h2>
                 </div>
@@ -661,19 +675,19 @@
                         <nav class="footer__top-nav">
                             <ul class="footer__top-nav-list">
                                 <li class="footer__top-nav-item">
-                                    <a href="#">ABOUT</a>
+                                    <a href="#about">ABOUT</a>
                                 </li>
                                 <li class="footer__top-nav-item">
-                                    <a href="#">FIRST WORKS</a>
+                                    <a href="#first-works">FIRST WORKS</a>
                                 </li>
                                 <li class="footer__top-nav-item">
-                                    <a href="#">FILMOGRAPHY</a>
+                                    <a href="#filmography">FILMOGRAPHY</a>
                                 </li>
                                 <li class="footer__top-nav-item">
-                                    <a href="#">BOOKS</a>
+                                    <a href="#books">BOOKS</a>
                                 </li>   
                                 <li class="footer__top-nav-item">
-                                    <a href="#">INFLUENCE</a>
+                                    <a href="#influence">INFLUENCE</a>
                                 </li>                           
                             </ul>
                         </nav>
@@ -685,7 +699,10 @@
                 </div>
             </div>
         </footer>
-    </div>    
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>      
     <script src="main.js"></script>
 </body>
 </html>

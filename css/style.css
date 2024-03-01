@@ -191,7 +191,19 @@ h5 {
 .header {
     background: white;
     padding-top: 45px;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    z-index: 100;
     margin-bottom: 100px;
+    transition: all .5s ease;
+}
+
+.header.fixed {
+    position: fixed;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid var(--secondary-gray);
+    transform: translateY(100px);
 }
 
 .header__inner {
@@ -427,6 +439,7 @@ h5 {
     flex: 1;
     padding: 74px 40px;
     background: var(--primary-red);
+    color: white;
 }
 
 .about__numbers-text-wrapper {
@@ -452,10 +465,6 @@ h5 {
     border-bottom: 5px solid white;
     display: inline-block;
     margin-bottom: 20px;
-}
-
-.about__numbers-block-item .block__item-text {
-    color: white;
 }
 
 .about__gallery {
@@ -775,20 +784,32 @@ h5 {
 }
 
 /* Horizontal scroll animation */
-.horizontal__container {
-    margin-bottom: 74px;
+.outer__container {
+    overflow-x: hidden;
 }
 
-.horizontal__img {
-    background: url('../assets/Big\ bg\ pic-1.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
+.slider__container {
+    display: flex;
+    width: 300vw;
+}
+
+.slider__item-img  {
+    width: 100vw;
     height: 100vh;
+    object-fit: cover;
+}
+
+@media(max-width: 850px) {
+    .outer__container {
+        display: none;
+    }
 }
 
 /* Dersu Uzala  */
+.dersu-uzala__wrapper {
+    padding-top: 100px;
+}
+
 .dersu-uzala__item-content-info-name, .dersu-uzala__item-content-info-year {
     color: var(--secondary-black);
 }
@@ -846,6 +867,11 @@ h5 {
         align-items: flex-start;
         gap: 20px;
     }
+
+    /* Dersu Uzala wrapper styles  */
+    .dersu-uzala__wrapper {
+        margin-top: 34px;
+    }
 }
 
 /* Last Akira Kurosawa films  */
@@ -876,26 +902,24 @@ h5 {
 }
 
 
-/* Scroll grow animation */
-.scroll_grow-animation {
-    background: url('../assets/animation-bg.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    width: 100%;
+/* Scale animation */
+.outer__container {
+    overflow: hidden;
+    margin-bottom: -50px;
+}
+
+.scale__animation-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
     height: 100vh;
 }
 
-@media(max-width: 1000px) {
-    .last__films-items-wrapper {
-        flex-direction: column;
-        gap: 44px;
-    }
-
-    .last__films-item-inner-padding {
-        padding-top: 0;
-    }
+.scale__animation-img {
+    object-fit: cover;
 }
+
 
 /* Books section  */
 .section__books {
@@ -1009,6 +1033,10 @@ h5 {
 }
 
 @media(max-width: 650px) {
+    .section__books {
+        padding: 150px 0 0 0;
+    }
+
     .books__items-row-top, .books__items-row-bottom {
         gap: 44px;
     }
@@ -1170,7 +1198,7 @@ h5 {
     align-items: flex-start;
     gap: 24px;
     position: absolute;
-    top: 10vh;
+    top: 30vh;
     left: 30vh;
     z-index: 5;
 }
@@ -1258,7 +1286,7 @@ h5 {
     }
 
     .influence__content {
-        top: 3vh;
+        top: 5vh;
     }
 
     .influence__content-title {
@@ -1284,8 +1312,11 @@ h5 {
 }
 
 @media(max-width: 450px) {
+    .section__influence {
+        padding: 0 0 150px 0;
+    }
     .influence__content {
-        top: 1vh;
+        top: 2vh;
         gap: 16px;
     }
 }
@@ -1320,7 +1351,7 @@ h5 {
     align-items: flex-start;
     gap: 24px;
     position: absolute;
-    top: 10vh;
+    top: 25vh;
     left: 30vh;
     z-index: 5;
 }

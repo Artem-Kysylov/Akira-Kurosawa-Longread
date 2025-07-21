@@ -24,7 +24,7 @@
 
 ### 🚀 Live Demo
 
-[Live Demo on Vercel →](https://your-kurosawa-project.vercel.app)
+[Live Demo on Vercel →](akira-kurosawa-longread.vercel.app)
 *(Replace with your actual Vercel URL)*
 
 ---
